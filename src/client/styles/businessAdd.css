@@ -1,0 +1,21 @@
+body {
+	background-color: lightblue;
+}
+h1 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 600%;
+}
+
+.results-box {
+	border: 1px solid black;
+	margin-bottom: 20px;
+}
+
+
+
+pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }

@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html ng-app="app">
+<head>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="src/client/styles/businessAdd.css">
+<title>gambrel - Add a Business</title>
+</head>
+<body ng-cloak>
+    <div class="container" ng-controller="BusinessAdd">
+        <a href="index"><h1 class="jumbotron">gambrel</h1></a>
+
+        <form ng-show="businessAddState == 'search'">
+            <div class="form-group">
+                <label for="addBusinessSearchInput">Enter the Name of the Business</label>
+                <input type="text" class="form-control" id="addBusinessSearchInput" ng-model="searchQuery"><br />
+
+                <label for="addBusinessLocationInput">Enter the Location of the Business</label>
+                <input type="text" class="form-control" id="addBusinessLocationInput" ng-model="locationQuery"><br />
+
+                <button type="submit" class="btn btn-primary" ng-click="clientBusinessSearch()"><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;Search</button>
+                <button type="submit" class="btn btn-success" ng-click="clientDetailsSearch()" ng-disabled="googlePlacesMatch.id === '' || yelpFusionMatch.id === ''">Confirm Selections</button>
+
+            </div>
+
+
+            <div id="google-places-search-results" ng-hide="googlePlacesResultsArray.length == 0">
+                <h3>Google Places API Search Results</h3>
+                <table class="results-box radio">
+                    <tr ng-repeat="result in googlePlacesResultsArray">
+                        <td>
+                            <label><input type="radio" name="goolgeradio" ng-model="googlePlacesMatch.id" ng-value="result.place_id"></label>
+                        </td>
+                        <td>
+                            {{result.name}}<br />
+                            {{result.formatted_address}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div id="yelp-fusion-search-results" ng-hide="yelpFusionResultsArray.length == 0">
+                <h3>Yelp Fusion API Search Results</h3>
+                <table class="results-box radio">
+                    <tr ng-repeat="result in yelpFusionResultsArray">
+                        <td>
+                            <label><input type="radio" name="yelpradio" ng-model="yelpFusionMatch.id" ng-value="result.id"></label>
+                        </td>
+                        <td>
+                            {{result.name}}<br />
+                            {{result.location.display_address[0] + ", " + result.location.display_address[1]}}
+                        </td>
+                    </tr>
+                    </p>
+                </table>
+            </div>
+
+        </form>
+
+        <form ng-show="businessAddState == 'details'">
+
+            <p>name: </p><input type="text" class="form-control" id="nameInput" ng-model="businessData.name" ng-value>
+
+
+
+            <div id="google-details-results">
+                <h3>Google Details Results</h3>
+            </div>
+
+            <div id="yelp-details-results">
+                <h3>Yelp Details Results</h3>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="/src/server/preferences.js"></script>
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/underscore/underscore.js"></script>
+
+    <script src="/src/client/app/app.module.js"></script>
+    <script src="/src/client/app/businessAdd/businessAdd.module.js"></script>
+    <script src="/src/client/app/businessAdd/businessAdd.controller.js"></script>
+    <script src="/src/client/app/businessData/businessData.module.js"></script>
+    <script src="/src/client/app/businessData/businessData.controller.js"></script>
+    <script src="/src/client/app/businessList/businessList.module.js"></script>
+    <script src="/src/client/app/businessList/businessList.controller.js"></script>
+    <script src="/src/client/app/productList/productList.module.js"></script>
+    <script src="/src/client/app/productList/productList.controller.js"></script>
+    <script src="/src/client/app/config/config.module.js"></script>
+    <script src="/src/client/app/config/config.controller.js"></script>   
+</body>
+</html>

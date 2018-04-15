@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html ng-app="app">
+<head>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="src/client/styles/index.css">
+<title>gambrel - home page</title>
+</head>
+<body ng-cloak>
+    <div class="container">
+        <a href="index"><h1 class="jumbotron">gambrel</h1></a>
+        <h3><a href="businessAdd"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Add a Business</a></h3>
+        <h3><a href="businessData"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Business Data</a></h3>
+        <h3><a href="businessList"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Business List</a></h3>
+        <h3><a href="productList"><span class="glyphicon glyphicon-usd"></span>&nbsp;&nbsp;Product List</a></h3>
+        <h3><a href="config"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;Configuration</a></h3>
+
+    </div>
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/underscore/underscore.js"></script>
+
+    <script src="/src/client/app/app.module.js"></script>
+    <script src="/src/client/app/businessAdd/businessAdd.module.js"></script>
+    <script src="/src/client/app/businessAdd/businessAdd.controller.js"></script>
+    <script src="/src/client/app/businessData/businessData.module.js"></script>
+    <script src="/src/client/app/businessData/businessData.controller.js"></script>
+    <script src="/src/client/app/businessList/businessList.module.js"></script>
+    <script src="/src/client/app/businessList/businessList.controller.js"></script>
+    <script src="/src/client/app/productList/productList.module.js"></script>
+    <script src="/src/client/app/productList/productList.controller.js"></script>
+    <script src="/src/client/app/config/config.module.js"></script>
+    <script src="/src/client/app/config/config.controller.js"></script>   
+</body>
+</html>

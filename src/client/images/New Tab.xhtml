@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!DOCTYPE html [
+  <!ENTITY % newTabDTD SYSTEM "chrome://browser/locale/newTab.dtd">
+  %newTabDTD;
+  <!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd">
+  %browserDTD;
+  <!ENTITY % globalDTD SYSTEM "chrome://global/locale/global.dtd">
+  %globalDTD;
+]>
+<html xmlns="http://www.w3.org/1999/xhtml" hasBrowserHandlers="true">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>New Tab</title>
+
+  <link rel="stylesheet" type="text/css" media="all" href="New%20Tab_files/global.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="New%20Tab_files/contentSearchUI.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="New%20Tab_files/newTab_002.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="New%20Tab_files/newTab.css" />
+</head>
+
+<body dir="ltr">
+  <div id="newtab-customize-overlay"></div>
+
+  <div class="newtab-customize-panel-container">
+    <div id="newtab-customize-panel" orient="vertical">
+        <div id="newtab-customize-panel-anchor"></div>
+        <div id="newtab-customize-panel-inner-wrapper">
+          <div id="newtab-customize-title" class="newtab-customize-panel-item">
+            <label>NEW TAB CONTROLS</label>
+          </div>
+
+          <div class="newtab-customize-complex-option">
+            <div id="newtab-customize-classic" class="newtab-customize-panel-superitem newtab-customize-panel-item selectable" selected="true">
+                <label>Show your top sites</label>
+            </div>
+            <div id="newtab-customize-enhanced" class="newtab-customize-panel-subitem" selected="true">
+                <label class="checkbox"></label>
+                <label>Include suggested sites</label>
+            </div>
+          </div>
+          <div id="newtab-customize-blank" class="newtab-customize-panel-item selectable">
+            <label>Show blank page</label>
+          </div>
+          <div id="newtab-customize-learn" class="newtab-customize-panel-item">
+            <label>Learn about New Tab</label>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div id="newtab-vertical-margin">
+    <div id="newtab-margin-top"></div>
+
+    <div id="newtab-margin-undo-container">
+      <div id="newtab-undo-container" undo-disabled="true">
+        <label id="newtab-undo-label">Thumbnail removed.</label>
+        <button id="newtab-undo-button" tabindex="-1" class="newtab-undo-button">Undo.</button>
+        <button id="newtab-undo-restore-button" tabindex="-1" class="newtab-undo-button">Restore All.</button>
+        <button id="newtab-undo-close-button" tabindex="-1" title="Hide"></button>
+      </div>
+    </div>
+
+    <div id="newtab-search-container">
+      <div id="newtab-search-form">
+        <div id="newtab-search-icon"></div>
+        <input name="q" id="newtab-search-text" aria-label="Search query" maxlength="256" autocomplete="off" aria-autocomplete="true" aria-controls="searchSuggestionTable" aria-expanded="false" placeholder="Search" type="text" />
+        <input id="newtab-search-submit" title="Submit search" value="▶" type="button" />
+      <table id="searchSuggestionTable" class="contentSearchSuggestionTable" role="presentation" hidden=""><tr class="contentSearchHeaderRow"><td class="contentSearchHeader" id="contentSearchDefaultEngineHeader"><img src="blob:null/51f21af2-d050-4d1d-b0db-6274b9417cdf" />Google Search</td></tr><tr class="contentSearchSuggestionsContainer"><td class="contentSearchSuggestionsContainer"><table class="contentSearchSuggestionsList" role="listbox"></table></td></tr><table class="contentSearchOneOffsTable contentSearchSuggestionsContainer" role="group"><tr class="contentSearchHeaderRow"><td class="contentSearchHeader" id="contentSearchSearchWithHeader">Search with:</td></tr></table><button class="contentSearchSettingsButton contentSearchHeaderRow contentSearchHeader" id="contentSearchSettingsButton" aria-selected="false">Change Search Settings</button></table></div>
+    </div>
+
+    <div id="newtab-horizontal-margin">
+      <div class="newtab-side-margin"></div>
+      <div id="newtab-grid" style="width: 1550px; max-width: 1551px; height: 802px; max-height: 802px;">
+        <h1 id="topsites-heading">Your Top Sites</h1>
+      <div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="YouTube
+https://www.youtube.com/" href="https://www.youtube.com/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fwww.youtube.com%2F&amp;revision=1007&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">youtube.com</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="State Employees' Credit Union - Home
+https://www.ncsecu.org/" href="https://www.ncsecu.org/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fwww.ncsecu.org%2F&amp;revision=6283&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">ncsecu.org</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Plex
+http://127.0.0.1:32400/web/index.html#!/server/97f33aa57ff3202355ed446299521ac56eda0dfc?key=%2Flibrary%2Fsections%2F6&amp;typeKey=%2Flibrary%2Fsections%2F6%2Fall%3Ftype%3D1&amp;limit=&amp;customFilter=false&amp;sort=titleSort&amp;save=1" href="http://127.0.0.1:32400/web/index.html#%21/server/97f33aa57ff3202355ed446299521ac56eda0dfc?key=%2Flibrary%2Fsections%2F6&amp;typeKey=%2Flibrary%2Fsections%2F6%2Fall%3Ftype%3D1&amp;limit=&amp;customFilter=false&amp;sort=titleSort&amp;save=1">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=http%3A%2F%2F127.0.0.1%3A32400%2Fweb%2Findex.html%23!%2Fserver%2F97f33aa57ff3202355ed446299521ac56eda0dfc%3Fkey%3D%252Flibrary%252Fsections%252F6%26typeKey%3D%252Flibrary%252Fsections%252F6%252Fall%253Ftype%253D1%26limit%3D%26customFilter%3Dfalse%26sort%3DtitleSort%26save%3D1&amp;revision=3024&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">127.0.0.1</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Facebook
+https://www.facebook.com/" href="https://www.facebook.com/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fwww.facebook.com%2F&amp;revision=2411&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">facebook.com</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Google
+https://www.google.com/" href="https://www.google.com/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fwww.google.com%2F&amp;revision=5877&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">google.com</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Movies
+https://fakedoor.store/f.php?f=8" href="https://fakedoor.store/f.php?f=8">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Ffakedoor.store%2Ff.php%3Ff%3D8&amp;revision=1552&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">fakedoor.store</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more
+https://www.amazon.com/" href="https://www.amazon.com/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fwww.amazon.com%2F&amp;revision=8144&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">amazon.com</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Unemployment Compensation
+http://www.uc.pa.gov/Pages/default.aspx" href="http://www.uc.pa.gov/Pages/default.aspx">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=http%3A%2F%2Fwww.uc.pa.gov%2FPages%2Fdefault.aspx&amp;revision=2909&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">uc.pa.gov</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Wikipedia, the free encyclopedia
+https://en.wikipedia.org/wiki/Main_Page" href="https://en.wikipedia.org/wiki/Main_Page">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMain_Page&amp;revision=2447&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">en.wikipedia.org</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Terry Radio :)
+http://terryradio.biz/" href="http://terryradio.biz/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=http%3A%2F%2Fterryradio.biz%2F&amp;revision=1532&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">terryradio.biz</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="gambrel - home page
+http://localhost:8080/index" href="http://localhost:8080/index">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=http%3A%2F%2Flocalhost%3A8080%2Findex&amp;revision=5337&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">localhost</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Electronics, Cars, Fashion, Collectibles, Coupons and More | eBay
+https://www.ebay.com/" href="https://www.ebay.com/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Fwww.ebay.com%2F&amp;revision=4008&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">ebay.com</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="Block292 - Engine
+https://insights.inmotionapp.net/" href="https://insights.inmotionapp.net/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Finsights.inmotionapp.net%2F&amp;revision=2050&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">insights.inmotionapp.net</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="http://www.wikipedia.org/" href="http://www.wikipedia.org/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=http%3A%2F%2Fwww.wikipedia.org%2F&amp;revision=7612&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">wikipedia.org</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div><div class="newtab-cell"><div class="newtab-site" draggable="true" type="history"><a class="newtab-link" title="inMotion Login
+https://login.inmotionapp.net/" href="https://login.inmotionapp.net/">  <span class="newtab-thumbnail placeholder"></span>  <span class="newtab-thumbnail thumbnail" style="background-image: url(&quot;moz-page-thumb://thumbnail/?url=https%3A%2F%2Flogin.inmotionapp.net%2F&amp;revision=2394&quot;);"></span>  <span class="newtab-thumbnail enhanced-content"></span>  <span class="newtab-title">login.inmotionapp.net</span></a><input title="Pin this site at its current position" class="newtab-control newtab-control-pin" type="button" /><input title="Remove this site" class="newtab-control newtab-control-block" type="button" /></div></div></div>
+      <div class="newtab-side-margin"></div>
+    </div>
+
+    <div id="newtab-margin-bottom"></div>
+  </div>
+  <input id="newtab-customize-button" dir="ltr" value="⚙" title="Customize your New Tab page" type="button" />
+</body>
+<script type="text/javascript" src="New%20Tab_files/contentSearchUI.js"></script>
+<script type="text/javascript" src="New%20Tab_files/newTab.js"></script>
+</html>
