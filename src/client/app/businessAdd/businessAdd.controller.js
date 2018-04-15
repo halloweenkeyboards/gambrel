@@ -127,22 +127,7 @@
 	            console.log(error);
 	        });
 
-
-
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -172,9 +157,6 @@
 		        return '<span class="' + cls + '">' + match + '</span>';
 		    });
 		}
-
-
-
 
 
     }
