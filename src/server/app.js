@@ -28,7 +28,6 @@ var Config = require('./config.js');
     app.post(api + '/yelpFusionDetails', yelpFusionDetails);
 
     function googlePlacesSearch(req, res) {
-    	//console.log(req.body.query);
 		request('https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + req.body.query + '&key=' + Config.google_api_key, function (err, response, body) {
 			if (err) {
 				console.log('error:', err);
@@ -56,13 +55,11 @@ var Config = require('./config.js');
 
 
     function googlePlacesDetails(req, res) {
-        //console.log(req.body.id);
         request('https://maps.googleapis.com/maps/api/place/details/json?placeid=' + req.body.id + '&key=' + Config.google_api_key, function (err, response, body) {
             if (err) {
                 console.log('error:', err);
             } else {
                 console.log("RESPONSE Google Places API - Details " + response.statusCode);
-                //console.log(body);
                 res.send(body);
             }
 

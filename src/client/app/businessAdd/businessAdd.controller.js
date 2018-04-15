@@ -9,7 +9,6 @@
 
     function BusinessAdd($scope, $http) {
         angular.element(document).ready(function() {
-            //$scope.clientGooglePlacesSearch();
         });
 
         console.log(config.business_data_defaults);
@@ -49,8 +48,6 @@
 	    		data: googleSearchData
 	    	}).then(function successCallback(response) {
 
-	            //console.log(response);
-	            //console.log(response.data.results);
 	            $scope.googlePlacesResultsArray = response.data.results;
 
 
@@ -72,9 +69,6 @@
 	    		data: yelpSearchData
 	    	}).then(function successCallback(response) {
 
-	            //console.log(response);
-	            //console.log(response.data.results);
-	            //$scope.googlePlacesResultsArray = response.data.results;
 	            $scope.yelpFusionResultsArray = response.data.businesses;
 
 	        }, function errorCallback(error) {
@@ -89,11 +83,8 @@
 
         	$scope.businessAddState = 'details';
 
-        	//console.log("Google Id: " + $scope.googlePlacesMatch.id);
-        	//console.log("Yelp Id: " + $scope.yelpFusionMatch.id);
         	var googleDetailsData = {};
         	googleDetailsData['id'] = $scope.googlePlacesMatch.id;
-        	//console.log($scope.googlePlacesMatch.id);
 
         	//  Google Places Post Request
 	    	$http({
@@ -102,10 +93,8 @@
 	    		data: googleDetailsData
 	    	}).then(function successCallback(response) {
 
-	            //console.log(response);
 	            var str = JSON.stringify(response.data.result, null, 2);
 
-				//output(str, "google-details-results");
 				output(syntaxHighlight(str), "google-details-results");
 
         		$scope.businessData.name = response.data.result.name;
