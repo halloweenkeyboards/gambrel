@@ -2,9 +2,9 @@
   "name": "gambrel",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/server/app.js",
   "scripts": {
-    "start": "node src/server/app.js" 
+    "start": "node src/server/app.js"
   },
   "author": "",
   "license": "ISC",
